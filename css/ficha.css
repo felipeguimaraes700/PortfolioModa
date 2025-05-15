@@ -16,6 +16,8 @@
     flex-direction: column;
     height: 80vh;
     text-align: center;
+    background-color: rgb(219, 219, 219);
+    margin: 40px 0px;
 }
 .container-ficha h2{
     font-family: "Bebas Neue", sans-serif;
