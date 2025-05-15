@@ -8,46 +8,75 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
+.galeria-fotos{
+    padding: 100px 0;
+}
 
 .galeria-fotos h2, .galeria-fotos h3{
     font-family: "Bebas Neue", sans-serif;
     margin-left: 30px;
 }
 .galeria-fotos h2{
-    font-size: 3rem;
+    font-size: 6rem;
     border-bottom: 3px solid black;
     width: 50vw;
 }
-.galeria-fotos h3{
-    font-size: 2rem;
+.recentes h3{
+    font-size: 4rem;
     margin-top: 0px;
 }
 
-.container-galeria-fotos-recentes{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    margin: 20px;
-}
-.container-galeria-fotos-recentes img{
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    border-radius: 8px;
+.container-galeria-fotos-recentes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 20px;
 }
 
-.outras-fotos{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    margin-top: 20px;
+.container-galeria-fotos-recentes img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.title-outras{
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 
 .outras-fotos img{
     width: 100%;
-    height: auto;
-    aspect-ratio: 3/4;
-    object-fit: cover;
+    height: 500px;
     border-radius: 8px;
+    object-fit: cover;
 }
+
+.container-galeria-fotos-outras {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+@media (max-width: 1200px) {
+  .container-galeria-fotos-outras {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .container-galeria-fotos-outras {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .container-galeria-fotos-outras {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
