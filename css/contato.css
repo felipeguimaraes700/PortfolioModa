@@ -15,4 +15,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url(https://cdn.pixabay.com/photo/2014/06/16/23/39/dark-red-370119_1280.png);
+    background-size: cover;
+}
+.container-contato h2{
+    color: white;
+    font-family:  "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+.container-icons-contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container-icons-contato i{
+    font-size: 3rem;
+    margin-left: 20px;
+    color: white;
+    transition: .3s linear;
+}
+
+.container-icons-contato i:hover{
+    font-size: 3.15rem;
+    color: rgb(255, 57, 57);
 }
