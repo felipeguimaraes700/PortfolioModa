@@ -33,3 +33,24 @@ function scrollCarousel(direction) {
     const carousel = document.getElementById('carousel');
     if (carousel) carousel.scrollLeft = 0;
   });
+
+
+
+   const videos = document.querySelectorAll('#carousel video');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+
+      if (entry.isIntersecting) {
+        // Se quiser que o vídeo dê play automático:
+        // video.play();
+      } else {
+        video.pause();
+      }
+    });
+  }, {
+    threshold: 0.6 // 60% visível = está ativo
+  });
+
+  videos.forEach(video => observer.observe(video));
