@@ -9,6 +9,7 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
+/*
 .destaques{
     display: flex;
     align-items: center;
@@ -38,4 +39,102 @@
     height: 600px;
     object-fit: cover;
     cursor: pointer;
+}
+*/
+
+.destaques{
+    height: 100vh;
+}
+.destaques h2{
+    font-size: 3rem;
+    font-family: "Bebas Neue", sans-serif;
+    padding: 0px 0px 60px 0px;
+}
+.container-destaques{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.carousel-wrapper-video{
+
+}
+
+.container-videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: aquamarine;
+}
+
+.container-videos video {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/* Esconde os botões no desktop */
+.carousel-btn-video {
+  display: none;
+}
+
+
+@media (max-width: 1322px) {
+  .destaques{
+    height: 100%;
+    padding-bottom: 50px;
+  }
+}
+
+
+/* Ativa o carrossel no mobile */
+@media (max-width: 768px) {
+
+
+  .carousel-wrapper-video{
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 50px;
+  }
+
+  .container-videos {
+    flex-wrap: nowrap;
+    align-items: none;
+    justify-content: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0;
+  }
+
+  .container-videos video {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    max-width: 100%;
+  }
+
+  .carousel-btn-video {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #00000088;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.3em 0.6em;
+    z-index: 1;
+    border-radius: 4px;
+  }
+
+  .carousel-btn-video.left {
+    left: 10px;
+  }
+
+  .carousel-btn-video.right {
+    right: 10px;
+  }
 }

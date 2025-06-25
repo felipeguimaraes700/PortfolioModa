@@ -21,3 +21,15 @@ const track = document.querySelector('.carousel-track');
   });
 
   window.addEventListener('resize', updateCarousel);
+
+function scrollCarousel(direction) {
+    const carousel = document.getElementById('carousel');
+    if (!carousel) return; // segurança extra
+    const width = carousel.clientWidth;
+    carousel.scrollLeft += direction * width;
+  }
+
+  window.addEventListener('load', () => {
+    const carousel = document.getElementById('carousel');
+    if (carousel) carousel.scrollLeft = 0;
+  });
