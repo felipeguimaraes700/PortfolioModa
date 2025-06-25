@@ -15,10 +15,12 @@
 <body>
     <nav>
         <ul class="container-nav-links">
-            <a href=""><li>Home</li></a>
-            <a href=""><li>Sobre mim</li></a>
-            <a href=""><li>fotos</li></a>
-            <a href=""><li>Contato</li></a>     
+            <a href="#home"><li>Home</li></a>
+            <a href="#about"><li>Sobre mim</li></a>
+            <a href="#photo"><li>fotos</li></a>
+            <a href="#Workshops"><li>Workshops</li></a>
+            <a href="#destaques"><li>destaques</li></a>
+            <a href="#contact"><li>Contato</li></a>     
         </ul>
 
         <ul class="container-nav-mobile-links">
@@ -29,45 +31,45 @@
         </ul>
     </nav>
 
-    <header>
+    <header id="home">
         <video  src="videos/bg-header.mp4" type="video/mp4"autoplay loop muted playsinline></video>
         <div class="container-global-home">
             <h1>Elisa Maria Vitória Alves Guimarães</h1>
             <a href=""><button>conheça</button></a>
         </div>
     </header>
-    <section class="sub-header">
-        <div class="container-apresentacao">
-            <p>Nascida em Belo Horizonte e criada em São Paulo, Elisa carrega na bagagem uma mistura rica de cultura, elegância e atitude. Com um olhar marcante e uma beleza que celebra com orgulho suas raízes afro-brasileiras, ela vem se consolidando como um nome em ascensão no cenário da moda nacional. Eleita Miss São Paulo 2023, já realizou participações em campanhas de beleza com a L'Oréal e outros projetos voltados para maquiagem e autoestima. Com presença forte e naturalidade diante das câmeras, ela representa uma geração de modelos que não apenas vestem tendências, mas também inspiram representatividade e autenticidade na moda brasileira.</p>
-        </div>
+    <section id="about">
+        <section class="sub-header" >
+            <div class="container-apresentacao">
+                <p>Nascida em Belo Horizonte e criada em São Paulo, Elisa carrega na bagagem uma mistura rica de cultura, elegância e atitude. Com um olhar marcante e uma beleza que celebra com orgulho suas raízes afro-brasileiras, ela vem se consolidando como um nome em ascensão no cenário da moda nacional. Eleita Miss São Paulo 2023, já realizou participações em campanhas de beleza com a L'Oréal e outros projetos voltados para maquiagem e autoestima. Com presença forte e naturalidade diante das câmeras, ela representa uma geração de modelos que não apenas vestem tendências, mas também inspiram representatividade e autenticidade na moda brasileira.</p>
+            </div>
+        </section>
+        <section class="principais-fotos">
+            <img src="img/img01.jpg" alt="foto da elisa">
+            <img src="img/fotos elisa/img38.JPG" alt="foto da elisa">
+            <img src="img/img08.jpg" alt="foto da elisa">
+        </section>
+        <section class="ficha-tecnica">
+            <div class="container-ficha">
+                <h2>Medidas</h2>
+                <ul>
+                    <li>Altura: 1,65m</li>
+                    <li>Busto: 92cm</li>
+                    <li>Cintura: 81cm</li>
+                    <li>Quadril: 1,12m</li>
+                    <li>Ombros: 1,15m</li>
+                    <li>Cintura até o calcanhar: 1,06m</li>
+                    <li>Ombro ao calcanhar: 1,37m</li>
+                    <li>Tamanha vestido: M</li>
+                    <li>Tamanha blusa: P</li>
+                    <li>Tamanha short: 38/40</li>
+                    <li>Tamanha calça:38/40</li>
+                </ul>
+            </div>
+        </section>
     </section>
 
-    <section class="principais-fotos">
-        <img src="img/img01.jpg" alt="foto da elisa">
-        <img src="img/fotos elisa/img38.JPG" alt="foto da elisa">
-        <img src="img/img08.jpg" alt="foto da elisa">
-    </section>
-
-    <section class="ficha-tecnica">
-        <div class="container-ficha">
-            <h2>Medidas</h2>
-            <ul>
-                <li>Altura: 1,65m</li>
-                <li>Busto: 92cm</li>
-                <li>Cintura: 81cm</li>
-                <li>Quadril: 1,12m</li>
-                <li>Ombros: 1,15m</li>
-                <li>Cintura até o calcanhar: 1,06m</li>
-                <li>Ombro ao calcanhar: 1,37m</li>
-                <li>Tamanha vestido: M</li>
-                <li>Tamanha blusa: P</li>
-                <li>Tamanha short: 38/40</li>
-                <li>Tamanha calça:38/40</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="galeria-fotos">
+    <section class="galeria-fotos" id="photo">
         <h2>Galeria de fotos</h2>
         <div class="recentes">
             <h3>recentes</h3>
@@ -107,18 +109,7 @@
         </div>
     </section>
 
-    <section class="projetos">
-        <!-- <div class="container-projetos">
-            <h2>Trabalhos / Projetos / Workshops</h2>
-            <div class="work 01">
-                <h3>Agência Gloss Model 2022 Woorkshop</h3>
-                <h4>Participação em workshop artístico e profissional com foco em moda, atuação e expressão corporal.
-                    <br>Conteúdos abordados:</h4>
-
-                <p>Consultoria Artística com Robson Lima – Direcionamento de carreira e imagem profissional</p>
-                <img src="img/img-projetos/consultoria artistica - robson lima.jpeg" alt="">
-            </div>
-        </div>  -->
+    <section class="projetos" id="Workshops">
 
         <h2>Trabalhos / Projetos / Workshops</h2>
 
@@ -184,20 +175,8 @@
             <img src="img/img-projetos/img-dança.jpeg" alt="">
         </div>
     </section>
-<!--
-    <section class="destaques">
-        <div class="container-destaques">
-            <h2>Destaques:</h2>
-            <div class="container-videos">
-                <video src="videos/video02.mp4"controls></video>
-                <video src="videos/video04.mp4"controls></video>
-                <video src="videos/video06.mp4"controls></video>
-                <video src="videos/video07.mp4"controls></video>
-            </div>
-        </div>
-    </section>
--->
-    <section class="destaques">
+
+    <section class="destaques" id="destaques">
         <div class="container-destaques">
             <h2>Destaques:</h2>
 
@@ -216,7 +195,7 @@
         </div>
     </section>
 
-    <section class="contato">
+    <section class="contato" id="contact">
         <div class="container-contato">
             <h2>Para propostas profissionais, parcerias ou outras informações, entre em contato através dos canais disponíveis. Será um prazer responder!</h2>
             <div class="container-icons-contato">
