@@ -13,22 +13,41 @@
     <title>Potifolio Elisa</title>
 </head>
 <body>
+    
     <nav>
-        <ul class="container-nav-links">
-            <a href="#home"><li>Home</li></a>
-            <a href="#about"><li>Sobre mim</li></a>
-            <a href="#photo"><li>fotos</li></a>
-            <a href="#Workshops"><li>Workshops</li></a>
-            <a href="#destaques"><li>destaques</li></a>
-            <a href="#contact"><li>Contato</li></a>     
-        </ul>
+        <!-- Botão abrir (mobile) -->
+        <div class="abrir" onclick="openNav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-        <ul class="container-nav-mobile-links">
-            <li>Home</li>
-            <li>Sobre mim</li>
-            <li>fotos</li>
-            <li>Contato</li>
+        <!-- Botão fechar (mobile) -->
+        
+
+        <!-- Menu desktop -->
+        <ul class="container-nav-links">
+          <a href="#home"><li>Home</li></a>
+          <a href="#about"><li>Sobre mim</li></a>
+          <a href="#photo"><li>Fotos</li></a>
+          <a href="#Workshops"><li>Workshops</li></a>
+          <a href="#destaques"><li>Destaques</li></a>
+          <a href="#contact"><li>Contato</li></a>
         </ul>
+    
+        <!-- Menu mobile lateral -->
+        <div class="links-nav-mobile">
+            <div class="fechar" onclick="closeNav()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+          <a href="#home"><li>Home</li></a>
+          <a href="#about"><li>Sobre mim</li></a>
+          <a href="#photo"><li>Fotos</li></a>
+          <a href="#Workshops"><li>Workshops</li></a>
+          <a href="#destaques"><li>Destaques</li></a>
+          <a href="#contact"><li>Contato</li></a>
+        </div>
+
+        <div class="menu-overlay" onclick="closeNav()"></div>
     </nav>
 
     <header id="home">

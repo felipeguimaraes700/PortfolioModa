@@ -30,6 +30,7 @@
   text-align: center;
   width: 50%;
 }
+
 .container-miss-sp h3{
   font-size: 2rem;
   border-bottom: 1px solid white;
@@ -109,7 +110,7 @@
     font-size: 1.5rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
-    z-index: 10;
+    z-index: 0;
   }
   
   .prev {
@@ -142,3 +143,9 @@
   .curso-danca .container-descricao ul li{
     list-style: none;
   }
+
+  @media (max-width: 1000px) {
+    .curso-danca img{
+      width: 100%;
+    }
+}

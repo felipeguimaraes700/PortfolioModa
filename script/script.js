@@ -1,3 +1,40 @@
+
+function openNav() {
+    document.querySelector(".abrir").style.display = "none";
+    document.querySelector(".fechar").style.display = "block";
+    document.querySelector(".links-nav-mobile").style.width = "60%";
+    document.querySelector(".menu-overlay").style.display = "block";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeNav() {
+    document.querySelector(".abrir").style.display = "block";
+    document.querySelector(".fechar").style.display = "none";
+    document.querySelector(".links-nav-mobile").style.width = "0%";
+    document.querySelector(".menu-overlay").style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+
+  // Fecha o menu ao clicar em qualquer link dentro do menu mobile
+  document.querySelectorAll('.links-nav-mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeNav();
+    });
+  });
+
+
+//SCROLL DO NAV
+   window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 0) {
+      nav.classList.add('scroll');
+    } else {
+      nav.classList.remove('scroll');
+    }
+  });
+
+
+
 const track = document.querySelector('.carousel-track');
   const slides = document.querySelectorAll('.work');
   const prevBtn = document.querySelector('.prev');

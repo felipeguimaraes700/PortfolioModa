@@ -4,6 +4,7 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 *{
@@ -76,6 +77,7 @@ header video{
 .container-global-home h1{
     font-family: "Bebas Neue", sans-serif;
     font-size: 3rem;
+    margin: 20px;
 }
 
 .container-global-home p{
@@ -107,6 +109,7 @@ header video{
     margin: 40px;
     color: rgb(122, 122, 122);
     width: 70%;
+    padding-top: 50px;
 }
 
 .principais-fotos{
@@ -122,4 +125,84 @@ header video{
     height: 100%;
     width: 32.5%;
     object-fit: cover;
+}
+
+
+
+
+
+
+
+
+/* Botões (abrir/fechar) */
+.abrir, .fechar {
+    display: flex;
+  font-size: 1.5rem;
+  color: white;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 2;
+  display: none;
+}
+
+/* Menu mobile lateral (deslizante) */
+.links-nav-mobile {
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow-x: hidden;
+  transition: width 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  z-index: 9999;
+}
+
+.links-nav-mobile a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.links-nav-mobile li {
+  list-style: none;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9998; 
+  display: none;
+}
+
+nav.scroll {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .container-nav-links {
+    display: none;
+  }
+
+  .abrir {
+    display: flex;
+  }
+
+  .container-nav-mobile-links {
+    display: none;
+  }
 }
