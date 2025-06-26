@@ -73,21 +73,47 @@ function scrollCarousel(direction) {
 
 
 
-   const videos = document.querySelectorAll('#carousel video');
+const videos = document.querySelectorAll('#carousel video');
+const btnLeft = document.querySelector('.carousel-btn-video.left');
+const btnRight = document.querySelector('.carousel-btn-video.right');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const video = entry.target;
-
-      if (entry.isIntersecting) {
-        // Se quiser que o vídeo dê play automático:
-        // video.play();
-      } else {
-        video.pause();
-      }
-    });
-  }, {
-    threshold: 0.6 // 60% visível = está ativo
+videos.forEach(video => {
+  // 1. Clique no vídeo = play/pause
+  video.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
   });
 
-  videos.forEach(video => observer.observe(video));
+  // 2. Esconder botões quando está tocando
+  video.addEventListener('play', () => {
+    btnLeft.style.opacity = '0';
+    btnRight.style.opacity = '0';
+    btnLeft.style.pointerEvents = 'none';
+    btnRight.style.pointerEvents = 'none';
+  });
+
+  // 3. Mostrar botões quando está pausado
+  video.addEventListener('pause', () => {
+    btnLeft.style.opacity = '1';
+    btnRight.style.opacity = '1';
+    btnLeft.style.pointerEvents = 'auto';
+    btnRight.style.pointerEvents = 'auto';
+  });
+});
+
+// 4. Pause automático ao sair da tela
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const video = entry.target;
+    if (!entry.isIntersecting) {
+      video.pause();
+    }
+  });
+}, {
+  threshold: 0.6
+});
+
+videos.forEach(video => observer.observe(video));
