@@ -58,10 +58,10 @@
     margin-bottom: 50px;
 }
 
-.work h3{
-    font-size: 2rem;
-    margin-left: 50px;
-    padding-top: 50px;
+.work h3{ 
+  background-color: #f9f9f9;
+  font-size: 2rem;
+  padding: 30px 20px;
 }
 .work h4{
     font-size: 1.2rem;
@@ -88,6 +88,10 @@
   }
   
   .work {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     min-width: 100%;
     box-sizing: border-box;
     padding: 1rem;
